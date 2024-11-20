@@ -1,0 +1,133 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #80deea);
+    background-size: 400% 400%;
+    animation: gradientAnimation 6s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: url("https://www.wallpaperflare.com/static/60/963/816/minimalism-food-illustrations-blue-wallpaper.jpg")
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#chatContainer {
+    background-color: white;
+    border-radius: 12px;
+    width: 400px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+#chatHeader {
+    background-color: #009688;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px 12px 0 0;
+}
+
+#chatBox {
+    padding: 15px;
+    flex-grow: 1;
+    overflow-y: auto;
+    height: 380px;
+    background: #f9f9f9;
+    position: relative;
+}
+
+#chatBox .userMsg, #chatBox .botMsg {
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 80%;
+    word-wrap: break-word;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#chatBox .userMsg {
+    background-color: #d0f8ce;
+    align-self: flex-start;
+}
+
+#chatBox .botMsg {
+    background-color: #e0e0e0;
+    align-self: flex-end;
+}
+
+#chatBox .typingIndicator {
+    font-size: 14px;
+    color: gray;
+    font-style: italic;
+    align-self: flex-end;
+}
+
+#chatForm {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+}
+
+#chatForm input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-right: 10px;
+    outline: none;
+}
+
+#chatForm input:focus {
+    border-color: #009688;
+    box-shadow: 0px 0px 5px rgba(0, 150, 136, 0.5);
+}
+
+#chatForm button {
+    background-color: #009688;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#chatForm button:hover {
+    background-color: #00796b;
+    box-shadow: 0px 2px 8px rgba(0, 150, 136, 0.3);
+}
+.typingIndicator {
+    font-size: 14px;
+    color: gray;
+    font-style: italic;
+    margin-bottom: 10px;
+    align-self: flex-end;
+}
